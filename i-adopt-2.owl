@@ -1,0 +1,409 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/iadopt/ont/iadopt"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/iadopt/ont/iadopt"
+     versionIRI="https://w3id.org/iadopt/ont/iadopt/1.0.0">
+    <Prefix name="" IRI="https://w3id.org/iadopt/ont/iadopt"/>
+    <Prefix name="dct" IRI="http://purl.org/dc/terms#"/>
+    <Prefix name="omv" IRI="http://omv.ontoware.org/2005/05/ontology#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="svu" IRI="http://scientificvariablesontology.org/svo/svu#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="dcat" IRI="http://www.w3.org/ns/dcat#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="opla" IRI="http://ontologydesignpatterns.org/opla#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="omv:usedOntologyEngineeringTool"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://www.isibang.ac.in/ns/mod/index.html#Protege</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcat:keyword"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">variable</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="omv:designedForOntologyTask"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">semantically precise description and mapping of variables</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:contributor"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Robert Huber, University Bremen, Germany</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">I-ADOPT Framework ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Anusuriya Devaraju, Terrestrial Ecosystem Research Network (TERN), University of Queensland, Australia, ORCID: 0000-0003-0870-3192</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:abstract"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The I-ADOPT Framework ontology provides machine-readable variable descriptions in which the components are mapped to FAIR vocabulary terms.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="foaf:primaryTopic"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Property</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:language"/>
+        <IRI>http://lexvo.org/id/iso639-3/eng</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="omv:hasOntologyLanguage"/>
+        <IRI>https://www.isibang.ac.in/ns/mod/index.html#OWL-DL</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="omv:usedOntologyEngineeringMethodology"/>
+        <IRI>https://www.isibang.ac.in/ns/mod/index.html#MethOntology</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gwenaelle Moncoiffe, National Oceanography Centre, British Oceanographic Data Centre, UK, ORCID: 0000-0001-6559-4178</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:license"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CC BY 4.0</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="foaf:primaryTopic"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Entity</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Barbara Magagna, Environment Agency Austria, ORCID: 0000-0003-2195-3997</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sirko Schindler, Institute of Data Science, German Aerospace Center (DLR), ORCID: 0000-0002-0964-4457</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="omv:hasFormalityLevel"/>
+        <IRI>https://www.isibang.ac.in/ns/mod/index.html#Schema</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcat:keyword"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">observable property</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:created"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">June 24, 2021</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Alison Pamment, National Centre for Atmospheric Science / Centre for Environmental Data Analysis, STFC Rutherford Appleton Laboratory, UK, ORCID: 0000-0001-5040-4626</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:contributor"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Simon J D Cox , CSIRO Land and Water, Australia; ORCID: 0000-0002-3884-3420</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Maria Stoica, University of Colorado, Boulder , ORCID: 0000-0002-6612-3439</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="omv:hasOntologySyntax"/>
+        <IRI>https://www.isibang.ac.in/ns/mod/index.html#OWL/XML</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:contributor"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">John Graybeal, Stanford University, School of Medicine, USA, ORCID: 0000-0001-6875-5360</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="foaf:primaryTopic"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Variable</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="/acknowledgement"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">RDA WG I-ADOPT</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="omv:conformsToKnowledgeRepresentationParadigm"/>
+        <IRI>https://www.isibang.ac.in/ns/mod/index.html#DescriptionLogics</IRI>
+    </Annotation>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:abstract"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:language"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="omv:hasOntologySyntax"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="omv:conformsToKnowledgeRepresentationParadigm"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Variable"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="omv:usedOntologyEngineeringMethodology"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:created"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="omv:usedOntologyEngineeringTool"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcat:keyword"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasObjectOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Entity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasProperty"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="omv:designedForOntologyTask"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasContextObject"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="omv:hasOntologyLanguage"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Constraint"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:contributor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Property"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="/acknowledgement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasMatrix"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:license"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="foaf:primaryTopic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasConstraint"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="omv:hasFormalityLevel"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="/Variable"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="/hasObjectOfInterest"/>
+            <Class IRI="/Entity"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="/Variable"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="/hasProperty"/>
+            <Class IRI="/Property"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasMatrix"/>
+        <ObjectProperty IRI="/hasContextObject"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasConstraint"/>
+        <Class IRI="/Variable"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasContextObject"/>
+        <Class IRI="/Variable"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasMatrix"/>
+        <Class IRI="/Variable"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasObjectOfInterest"/>
+        <Class IRI="/Variable"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasProperty"/>
+        <Class IRI="/Variable"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasConstraint"/>
+        <Class IRI="/Constraint"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasContextObject"/>
+        <Class IRI="/Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasMatrix"/>
+        <Class IRI="/Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasObjectOfInterest"/>
+        <Class IRI="/Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasProperty"/>
+        <Class IRI="/Property"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Constraint</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Constraint limits the scope of the observation and confines the context to a particular state. It describes properties of the involved entities that are relevant to the particular observation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Constraint</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">constraint</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <IRI>/Constraint</IRI>
+        <AbbreviatedIRI>svu:Attribute</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Entity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An object or process that has a role in an observation. An Entity may play one of the following roles: ObjectOfInterest, ContextObject, Matrix. Whether the involvement of a particular entity is meaningful enough to include in the variable description depends on the specific context.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Entity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <IRI>/Entity</IRI>
+        <AbbreviatedIRI>svu:Phenomenon</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Property</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A type of a characteristic of the ObjectOfInterest.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Property</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <IRI>/Property</IRI>
+        <AbbreviatedIRI>svu:Property</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Variable</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A description of something observed or derived, minimally consisting of  an ObjectOfInterest and its Property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Variable</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">variable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <IRI>/Variable</IRI>
+        <AbbreviatedIRI>svu:Variable</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasConstraint</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Variable has a Constraint, that confines an Entity involved in the observation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasConstraint</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasConstraint</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <IRI>/hasConstraint</IRI>
+        <AbbreviatedIRI>svu:containsAttribute</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasContextObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Variable has an Entity that provides additional background information regarding the ObjectOfInterest.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasContextObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasContextObject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <IRI>/hasContextObject</IRI>
+        <AbbreviatedIRI>svu:hasRecordedContextPhenomenon</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasMatrix</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Variable might have an Entity in which the ObjectOfInterest is contained.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasMatrix</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasMatrix</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+        <IRI>/hasMatrix</IRI>
+        <AbbreviatedIRI>svu:hasRecordedMediumPhenomenon</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasObjectOfInterest</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Variable has an Entity whose Property is observed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasObjectOfInterest</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasObjectOfInterest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+        <IRI>/hasObjectOfInterest</IRI>
+        <AbbreviatedIRI>svu:hasRecordedPhenomenon</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasProperty</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Variable has a Property that characterizes an Entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasProperty</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasProperty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <IRI>/hasProperty</IRI>
+        <AbbreviatedIRI>svu:hasRecordedProperty</AbbreviatedIRI>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
