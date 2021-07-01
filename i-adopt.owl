@@ -1,14 +1,15 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="https://w3id.org/iadopt/ont/iadopt"
+     xml:base="https://w3id.org/iadopt/ont"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://w3id.org/iadopt/ont/iadopt"
-     versionIRI="https://w3id.org/iadopt/ont/iadopt/1.0.0">
-    <Prefix name="" IRI="https://w3id.org/iadopt/ont/iadopt"/>
-    <Prefix name="dct" IRI="http://purl.org/dc/terms#"/>
+     ontologyIRI="https://w3id.org/iadopt/ont"
+     versionIRI="https://w3id.org/iadopt/ont/1.0.0">
+    <Prefix name="" IRI="https://w3id.org/iadopt/ont"/>
+    <Prefix name="dct" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="iop" IRI="https://w3id.org/iadopt/ont/"/>
     <Prefix name="omv" IRI="http://omv.ontoware.org/2005/05/ontology#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
