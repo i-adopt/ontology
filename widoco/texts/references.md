@@ -10,6 +10,6 @@ Magagna, B., Stocker, M. and Diepenbroek, M.: Towards Interoperability for Obser
 
 Stoica, M., & Peckham, S. D. (2018). An Ontology Blueprint for Constructing Qualitative and Quantitative Scientific Variables. In International Semantic Web Conference (P&D/Industry/BlueSky).
 
-Stoica, M., & Peckham, S. (2019, September). Incorporating new concepts into the Scientific Variables Ontology. In 2019 15th International Conference on eScience (eScience) (pp. 539-540). IEEE.
+Stoica, M., & Peckham, S. (2019, September). Incorporating new concepts into the Scientific Variables Ontology. In 2019 15th International Conference on eScience (eScience) (pp. 539-540). IEEE. DOI: <a href="https://doi.org/10.1109/eScience.2019.00073">https://doi.org/10.1109/eScience.2019.00073</a> 
 
 Stoica, M., & Peckham, S. D. (2019). The Scientific Variables Ontology: A blueprint for custom manual and automated creation and alignment of machine-interpretable qualitative and quantitative variable concepts. In Modeling the World's Systems Conference.
