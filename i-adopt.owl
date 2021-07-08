@@ -19,6 +19,10 @@
     <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Annotation>
+      <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+      <Literal>0.8.0</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="omv:conformsToKnowledgeRepresentationParadigm"/>
         <IRI>https://www.isibang.ac.in/ns/mod/index.html#DescriptionLogics</IRI>
     </Annotation>

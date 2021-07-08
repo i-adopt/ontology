@@ -5,7 +5,7 @@
 
 Run
 ```
-java -jar ./widoco-1.4.14-jar-with-dependencies.jar -ontFile ../i-adopt.owl -outFolder ../../i-adopt.github.io/ -confFile ./widoco.conf -htaccess -webVowl -includeAnnotationProperties -displayDirectImportsOnly
+java -jar ./widoco-1.4.15-jar-with-dependencies.jar -ontFile ../i-adopt.owl -outFolder ../../i-adopt.github.io/ -confFile ./widoco.conf -htaccess -webVowl -includeAnnotationProperties -displayDirectImportsOnly
 ```
 
 *Used paths for input and outputs might need to be adjusted.*
