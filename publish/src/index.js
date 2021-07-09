@@ -1,6 +1,7 @@
 const Config = require('./config'),
   Glob = require('glob-promise'),
   Cheerio = require('cheerio'),
+  Marked = require("marked"),
   Path = require('path'),
   Util = require('util'),
   exec = Util.promisify(require('child_process').exec),
@@ -17,6 +18,7 @@ const Config = require('./config'),
 
   // common objects
   const $ = Cheerio.load('<div id="root"></div>');
+  let path, raw;
 
   // initial run of Widoco
   const { stdout, stderr } = await exec(`java -jar ${Config.widocoPath} -ontFile "${Config.ontFile}" -outFolder '${Config.outPath}' -confFile "${Config.confFile}" -webVowl -includeAnnotationProperties -displayDirectImportsOnly -rewriteAll`);
@@ -39,6 +41,7 @@ const Config = require('./config'),
     // skip files without equivalent
     if (!(await fileExists(targetPath))) {
       console.log(`   unknown target file: ${targetFile}`)
+      continue;
     }
 
     // load the source file
@@ -53,10 +56,19 @@ const Config = require('./config'),
 
   }
 
+  // acknowledgements work differently
+  path = Path.join(Config.outPath, 'index-en.html');
+  raw = await Fs.readFile(path, 'utf8');
+  $('#root').html(raw);
+  raw = await Fs.readFile(Path.join(Config.textFolder, 'acknowledgements.md'), 'utf8');
+  $('#acknowledgements').append(Marked(raw));
+  await Fs.writeFile(path, $('#root').html());
+  console.log('   index-en.html');
+
   // cleanup - overview-en.html
   console.log('Cleaning up files')
-  let path = Path.join(Config.outPath, 'sections', 'overview-en.html');
-  let raw = await Fs.readFile(path, 'utf8');
+  path = Path.join(Config.outPath, 'sections', 'overview-en.html');
+  raw = await Fs.readFile(path, 'utf8');
   $('#root').html(raw);
   $('li')
     .each((_, li) => {
