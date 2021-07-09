@@ -1,0 +1,16 @@
+{
+  "name": "iadopt-ontology-publish",
+  "version": "1.0.0",
+  "description": "prepare w3id publication of IAdopt ontology",
+  "main": "src/index.js",
+  "scripts": {
+    "prepare": "node src/index.js"
+  },
+  "author": "Sirko Schindler",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "glob": "^7.1.7",
+    "glob-promise": "^4.2.0"
+  }
+}
