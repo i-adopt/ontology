@@ -19,10 +19,6 @@
     <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Annotation>
-      <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-      <Literal>0.8.0</Literal>
-    </Annotation>
-    <Annotation>
         <AnnotationProperty abbreviatedIRI="omv:conformsToKnowledgeRepresentationParadigm"/>
         <IRI>https://www.isibang.ac.in/ns/mod/index.html#DescriptionLogics</IRI>
     </Annotation>
@@ -107,6 +103,10 @@
         <Literal>I-ADOPT Framework ontology</Literal>
     </Annotation>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal>0.8.0</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="dcat:keyword"/>
         <Literal>observable property</Literal>
     </Annotation>
@@ -141,6 +141,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="/Variable"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/constrains"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/hasConstraint"/>
@@ -206,6 +209,13 @@
         <AnnotationProperty IRI="/acknowledgement"/>
     </Declaration>
     <EquivalentClasses>
+        <Class IRI="/Constraint"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/constrains"/>
+            <Class IRI="/Entity"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="/Variable"/>
         <ObjectExactCardinality cardinality="1">
             <ObjectProperty IRI="/hasObjectOfInterest"/>
@@ -223,6 +233,10 @@
         <ObjectProperty IRI="/hasMatrix"/>
         <ObjectProperty IRI="/hasContextObject"/>
     </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/constrains"/>
+        <Class IRI="/Constraint"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/hasConstraint"/>
         <Class IRI="/Variable"/>
@@ -243,6 +257,10 @@
         <ObjectProperty IRI="/hasProperty"/>
         <Class IRI="/Variable"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/constrains"/>
+        <Class IRI="/Entity"/>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/hasConstraint"/>
         <Class IRI="/Constraint"/>
@@ -302,6 +320,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/Variable</IRI>
         <Literal>variable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/constrains</IRI>
+        <Literal>A Constraint constains an Entitiy having a role in the Variable description.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/constrains</IRI>
+        <Literal>constrains</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
