@@ -61,6 +61,15 @@ const Config = require('./config'),
   raw = await Fs.readFile(path, 'utf8');
   $('#root').html(raw);
   raw = await Fs.readFile(Path.join(Config.textFolder, 'acknowledgements.md'), 'utf8');
+  // cleanout the old ack
+  $('#acknowledgements').find( 'p:not(:nth-of-type(1))' ).remove(); // first <p> is widoco acknowledgement
+  $('#acknowledgements') // https://stackoverflow.com/a/6520267/1169798
+    .contents()
+    .filter( function() {
+      return this.nodeType == 3; // Node.TEXT_NODE == 3
+    } )
+    .remove();
+  // add the new ack
   $('#acknowledgements').append(Marked(raw));
   await Fs.writeFile(path, $('#root').html());
   console.log('   index-en.html');
