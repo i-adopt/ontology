@@ -3,7 +3,7 @@
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:xml="http://www.w3.org/XML/1998/namespace"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" ontologyIRI="https://w3id.org/iadopt/ont" versionIRI="https://w3id.org/iadopt/ont/0.0.8">
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" ontologyIRI="https://w3id.org/iadopt/ont" versionIRI="https://w3id.org/iadopt/ont/0.8.0">
   <Prefix name="" IRI="https://w3id.org/iadopt/ont"/>
   <Prefix name="dct" IRI="http://purl.org/dc/terms/"/>
   <Prefix name="iop" IRI="https://w3id.org/iadopt/ont/"/>
