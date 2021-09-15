@@ -9,7 +9,7 @@ const Config = require('./config'),
 
 !async function () {
 
-  // verify that all path exist
+  // verify that all paths exist
   for (const prop of ['widocoPath', 'ontFile', 'textFolder', 'confFile']) {
     if (!(await fileExists(Config[prop]))) {
       throw Error(`Could not find ${prop} at location ${Config.widocoPath}`);
@@ -61,8 +61,8 @@ const Config = require('./config'),
   raw = await Fs.readFile(path, 'utf8');
   $('#root').html(raw);
   raw = await Fs.readFile(Path.join(Config.textFolder, 'acknowledgements.md'), 'utf8');
-  // cleanout the old ack
-  $('#acknowledgements').find( 'p:not(:nth-of-type(1))' ).remove(); // first <p> is widoco acknowledgement
+  // clean out the old ack
+  $('#acknowledgements').find( 'p:not(:nth-of-type(1))' ).remove(); // first <p> is Widoco acknowledgement
   $('#acknowledgements') // https://stackoverflow.com/a/6520267/1169798
     .contents()
     .filter( function() {
@@ -111,6 +111,12 @@ const Config = require('./config'),
   await Fs.unlink(indexTarget);
   await Fs.copyFile(indexSource, indexTarget);
   console.log('Copied index-en.html to index.html');
+
+  // copy json file as json-ld to provide both
+  const jsonSource = Path.join(Config.outPath, 'ontology.json'),
+        jsonTarget = Path.join(Config.outPath, 'ontology.jsonld');
+  await Fs.copyFile(jsonSource, jsonTarget);
+  console.log('Copied ontology.json to ontology.jsonld');
 
 }()
   .catch((e) => console.error(e));
