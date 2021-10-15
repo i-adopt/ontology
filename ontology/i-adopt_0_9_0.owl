@@ -1,0 +1,376 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#" xml:base="https://w3id.org/iadopt/ont"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:xml="http://www.w3.org/XML/1998/namespace"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" ontologyIRI="https://w3id.org/iadopt/ont" versionIRI="https://w3id.org/iadopt/ont/0.9.0">
+  <Prefix name="" IRI="https://w3id.org/iadopt/ont"/>
+  <Prefix name="dct" IRI="http://purl.org/dc/terms/"/>
+  <Prefix name="iop" IRI="https://w3id.org/iadopt/ont/"/>
+  <Prefix name="omv" IRI="http://omv.ontoware.org/2005/05/ontology#"/>
+  <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+  <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+  <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+  <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+  <Prefix name="dcat" IRI="http://www.w3.org/ns/dcat#"/>
+  <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+  <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="dct:title"/>
+    <Literal>I-ADOPT Framework ontology</Literal>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="omv:conformsToKnowledgeRepresentationParadigm"/>
+    <IRI>https://www.isibang.ac.in/ns/mod/index.html#DescriptionLogics</IRI>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="omv:designedForOntologyTask"/>
+    <Literal>semantically precise description and mapping of variables</Literal>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="omv:hasFormalityLevel"/>
+    <IRI>https://www.isibang.ac.in/ns/mod/index.html#Schema</IRI>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="omv:hasOntologyLanguage"/>
+    <IRI>https://www.isibang.ac.in/ns/mod/index.html#OWL-DL</IRI>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="omv:hasOntologySyntax"/>
+    <IRI>https://www.isibang.ac.in/ns/mod/index.html#OWL/XML</IRI>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="omv:usedOntologyEngineeringMethodology"/>
+    <IRI>https://www.isibang.ac.in/ns/mod/index.html#MethOntology</IRI>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="omv:usedOntologyEngineeringTool"/>
+    <Literal>https://www.isibang.ac.in/ns/mod/index.html#Protege</Literal>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="dct:abstract"/>
+    <Literal>The I-ADOPT Framework ontology provides machine-readable variable descriptions in which the components are mapped to FAIR vocabulary terms.</Literal>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="dct:contributor"/>
+    <Literal>John Graybeal, Stanford University, School of Medicine, USA, ORCID: 0000-0001-6875-5360</Literal>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="dct:contributor"/>
+    <Literal>Robert Huber, University Bremen, Germany</Literal>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="dct:contributor"/>
+    <Literal>Simon J D Cox , CSIRO Land and Water, Australia; ORCID: 0000-0002-3884-3420</Literal>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="dct:created"/>
+    <Literal>October 15, 2021</Literal>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="dct:creator"/>
+    <Literal>Alison Pamment, National Centre for Atmospheric Science / Centre for Environmental Data Analysis, STFC Rutherford Appleton Laboratory, UK, ORCID: 0000-0001-5040-4626</Literal>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="dct:creator"/>
+    <Literal>Anusuriya Devaraju, Terrestrial Ecosystem Research Network (TERN), University of Queensland, Australia, ORCID: 0000-0003-0870-3192</Literal>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="dct:creator"/>
+    <Literal>Barbara Magagna, Environment Agency Austria, ORCID: 0000-0003-2195-3997</Literal>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="dct:creator"/>
+    <Literal>Gwenaelle Moncoiffe, National Oceanography Centre, British Oceanographic Data Centre, UK, ORCID: 0000-0001-6559-4178</Literal>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="dct:creator"/>
+    <Literal>Maria Stoica, University of Colorado, Boulder , ORCID: 0000-0002-6612-3439</Literal>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="dct:creator"/>
+    <Literal>Sirko Schindler, Institute of Data Science, German Aerospace Center (DLR), ORCID: 0000-0002-0964-4457</Literal>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="dct:language"/>
+    <IRI>http://lexvo.org/id/iso639-3/eng</IRI>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="dct:license"/>
+    <Literal>CC BY 4.0</Literal>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    <Literal>I-ADOPT Framework ontology</Literal>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+    <Literal>0.9.0</Literal>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="dcat:keyword"/>
+    <Literal>observable property</Literal>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="dcat:keyword"/>
+    <Literal>variable</Literal>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="foaf:primaryTopic"/>
+    <Literal>Entity</Literal>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="foaf:primaryTopic"/>
+    <Literal>Property</Literal>
+  </Annotation>
+  <Annotation>
+    <AnnotationProperty abbreviatedIRI="foaf:primaryTopic"/>
+    <Literal>Variable</Literal>
+  </Annotation>
+  <Declaration>
+    <Class IRI="/Constraint"/>
+  </Declaration>
+  <Declaration>
+    <Class IRI="/Entity"/>
+  </Declaration>
+  <Declaration>
+    <Class IRI="/Property"/>
+  </Declaration>
+  <Declaration>
+    <Class IRI="/Variable"/>
+  </Declaration>
+  <Declaration>
+    <ObjectProperty IRI="/constrains"/>
+  </Declaration>
+  <Declaration>
+    <ObjectProperty IRI="/hasConstraint"/>
+  </Declaration>
+  <Declaration>
+    <ObjectProperty IRI="/hasContextObject"/>
+  </Declaration>
+  <Declaration>
+    <ObjectProperty IRI="/hasMatrix"/>
+  </Declaration>
+  <Declaration>
+    <ObjectProperty IRI="/hasObjectOfInterest"/>
+  </Declaration>
+  <Declaration>
+    <ObjectProperty IRI="/hasProperty"/>
+  </Declaration>
+  <Declaration>
+    <AnnotationProperty abbreviatedIRI="omv:conformsToKnowledgeRepresentationParadigm"/>
+  </Declaration>
+  <Declaration>
+    <AnnotationProperty abbreviatedIRI="omv:designedForOntologyTask"/>
+  </Declaration>
+  <Declaration>
+    <AnnotationProperty abbreviatedIRI="omv:hasFormalityLevel"/>
+  </Declaration>
+  <Declaration>
+    <AnnotationProperty abbreviatedIRI="omv:hasOntologyLanguage"/>
+  </Declaration>
+  <Declaration>
+    <AnnotationProperty abbreviatedIRI="omv:hasOntologySyntax"/>
+  </Declaration>
+  <Declaration>
+    <AnnotationProperty abbreviatedIRI="omv:usedOntologyEngineeringMethodology"/>
+  </Declaration>
+  <Declaration>
+    <AnnotationProperty abbreviatedIRI="omv:usedOntologyEngineeringTool"/>
+  </Declaration>
+  <Declaration>
+    <AnnotationProperty abbreviatedIRI="dct:abstract"/>
+  </Declaration>
+  <Declaration>
+    <AnnotationProperty abbreviatedIRI="dct:contributor"/>
+  </Declaration>
+  <Declaration>
+    <AnnotationProperty abbreviatedIRI="dct:created"/>
+  </Declaration>
+  <Declaration>
+    <AnnotationProperty abbreviatedIRI="dct:creator"/>
+  </Declaration>
+  <Declaration>
+    <AnnotationProperty abbreviatedIRI="dct:language"/>
+  </Declaration>
+  <Declaration>
+    <AnnotationProperty abbreviatedIRI="dct:license"/>
+  </Declaration>
+  <Declaration>
+    <AnnotationProperty abbreviatedIRI="dcat:keyword"/>
+  </Declaration>
+  <Declaration>
+    <AnnotationProperty abbreviatedIRI="foaf:primaryTopic"/>
+  </Declaration>
+  <EquivalentClasses>
+    <Class IRI="/Variable"/>
+    <ObjectExactCardinality cardinality="1">
+      <ObjectProperty IRI="/hasObjectOfInterest"/>
+      <Class IRI="/Entity"/>
+    </ObjectExactCardinality>
+  </EquivalentClasses>
+  <EquivalentClasses>
+    <Class IRI="/Variable"/>
+    <ObjectExactCardinality cardinality="1">
+      <ObjectProperty IRI="/hasProperty"/>
+      <Class IRI="/Property"/>
+    </ObjectExactCardinality>
+  </EquivalentClasses>
+  <SubObjectPropertyOf>
+    <ObjectProperty IRI="/hasMatrix"/>
+    <ObjectProperty IRI="/hasContextObject"/>
+  </SubObjectPropertyOf>
+  <ObjectPropertyDomain>
+    <ObjectProperty IRI="/constrains"/>
+    <Class IRI="/Constraint"/>
+  </ObjectPropertyDomain>
+  <ObjectPropertyDomain>
+    <ObjectProperty IRI="/hasConstraint"/>
+    <Class IRI="/Variable"/>
+  </ObjectPropertyDomain>
+  <ObjectPropertyDomain>
+    <ObjectProperty IRI="/hasContextObject"/>
+    <Class IRI="/Variable"/>
+  </ObjectPropertyDomain>
+  <ObjectPropertyDomain>
+    <ObjectProperty IRI="/hasMatrix"/>
+    <Class IRI="/Variable"/>
+  </ObjectPropertyDomain>
+  <ObjectPropertyDomain>
+    <ObjectProperty IRI="/hasObjectOfInterest"/>
+    <Class IRI="/Variable"/>
+  </ObjectPropertyDomain>
+  <ObjectPropertyDomain>
+    <ObjectProperty IRI="/hasProperty"/>
+    <Class IRI="/Variable"/>
+  </ObjectPropertyDomain>
+  <ObjectPropertyRange>
+    <ObjectProperty IRI="/constrains"/>
+    <Class IRI="/Entity"/>
+  </ObjectPropertyRange>
+  <ObjectPropertyRange>
+    <ObjectProperty IRI="/hasConstraint"/>
+    <Class IRI="/Constraint"/>
+  </ObjectPropertyRange>
+  <ObjectPropertyRange>
+    <ObjectProperty IRI="/hasContextObject"/>
+    <Class IRI="/Entity"/>
+  </ObjectPropertyRange>
+  <ObjectPropertyRange>
+    <ObjectProperty IRI="/hasMatrix"/>
+    <Class IRI="/Entity"/>
+  </ObjectPropertyRange>
+  <ObjectPropertyRange>
+    <ObjectProperty IRI="/hasObjectOfInterest"/>
+    <Class IRI="/Entity"/>
+  </ObjectPropertyRange>
+  <ObjectPropertyRange>
+    <ObjectProperty IRI="/hasProperty"/>
+    <Class IRI="/Property"/>
+  </ObjectPropertyRange>
+  <AnnotationAssertion>
+    <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <IRI>/Constraint</IRI>
+    <Literal>A Constraint limits the scope of the observation and confines the context to a particular state. It describes properties of the involved entities that are relevant to the particular observation.</Literal>
+  </AnnotationAssertion>
+  <AnnotationAssertion>
+    <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    <IRI>/Constraint</IRI>
+    <Literal>constraint</Literal>
+  </AnnotationAssertion>
+  <AnnotationAssertion>
+    <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <IRI>/Entity</IRI>
+    <Literal>An object or process that has a role in an observation. An Entity may play one of the following roles: ObjectOfInterest, ContextObject, Matrix. Whether the involvement of a particular entity is meaningful enough to include in the variable description depends on the specific context.</Literal>
+  </AnnotationAssertion>
+  <AnnotationAssertion>
+    <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    <IRI>/Entity</IRI>
+    <Literal>entity</Literal>
+  </AnnotationAssertion>
+  <AnnotationAssertion>
+    <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <IRI>/Property</IRI>
+    <Literal>A type of a characteristic of the ObjectOfInterest.</Literal>
+  </AnnotationAssertion>
+  <AnnotationAssertion>
+    <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    <IRI>/Property</IRI>
+    <Literal>property</Literal>
+  </AnnotationAssertion>
+  <AnnotationAssertion>
+    <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <IRI>/Variable</IRI>
+    <Literal>A description of something observed or derived, minimally consisting of  an ObjectOfInterest and its Property.</Literal>
+  </AnnotationAssertion>
+  <AnnotationAssertion>
+    <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    <IRI>/Variable</IRI>
+    <Literal>variable</Literal>
+  </AnnotationAssertion>
+  <AnnotationAssertion>
+    <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <IRI>/constrains</IRI>
+    <Literal>A Constraint constrains an Entity having a role in the Variable description.</Literal>
+  </AnnotationAssertion>
+  <AnnotationAssertion>
+    <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    <IRI>/constrains</IRI>
+    <Literal>constrains</Literal>
+  </AnnotationAssertion>
+  <AnnotationAssertion>
+    <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <IRI>/hasConstraint</IRI>
+    <Literal>A Variable has a Constraint, that confines an Entity involved in the observation.</Literal>
+  </AnnotationAssertion>
+  <AnnotationAssertion>
+    <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    <IRI>/hasConstraint</IRI>
+    <Literal>hasConstraint</Literal>
+  </AnnotationAssertion>
+  <AnnotationAssertion>
+    <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <IRI>/hasContextObject</IRI>
+    <Literal>A Variable has an Entity that provides additional background information regarding the ObjectOfInterest.</Literal>
+  </AnnotationAssertion>
+  <AnnotationAssertion>
+    <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    <IRI>/hasContextObject</IRI>
+    <Literal>hasContextObject</Literal>
+  </AnnotationAssertion>
+  <AnnotationAssertion>
+    <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <IRI>/hasMatrix</IRI>
+    <Literal>A Variable might have an Entity in which the ObjectOfInterest is contained.</Literal>
+  </AnnotationAssertion>
+  <AnnotationAssertion>
+    <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    <IRI>/hasMatrix</IRI>
+    <Literal>hasMatrix</Literal>
+  </AnnotationAssertion>
+  <AnnotationAssertion>
+    <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <IRI>/hasObjectOfInterest</IRI>
+    <Literal>A Variable has an Entity whose Property is observed.</Literal>
+  </AnnotationAssertion>
+  <AnnotationAssertion>
+    <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    <IRI>/hasObjectOfInterest</IRI>
+    <Literal>hasObjectOfInterest</Literal>
+  </AnnotationAssertion>
+  <AnnotationAssertion>
+    <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <IRI>/hasProperty</IRI>
+    <Literal>A Variable has a Property that characterizes an Entity.</Literal>
+  </AnnotationAssertion>
+  <AnnotationAssertion>
+    <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    <IRI>/hasProperty</IRI>
+    <Literal>hasProperty</Literal>
+  </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

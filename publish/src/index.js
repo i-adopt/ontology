@@ -21,9 +21,9 @@ const Config = require('./config'),
   let path, raw;
 
   // initial run of Widoco
-  const { stdout, stderr } = await exec(`java -jar ${Config.widocoPath} -ontFile "${Config.ontFile}" -outFolder '${Config.outPath}' -confFile "${Config.confFile}" -webVowl -includeAnnotationProperties -displayDirectImportsOnly -rewriteAll`);
+  const { stdout, stderr } = await exec(`java -jar ${Config.widocoPath} -ontFile "${Config.ontFile}" -outFolder "${Config.outPath}" -confFile "${Config.confFile}" -webVowl -displayDirectImportsOnly -rewriteAll`);
+  console.log( stderr )
   if (!stdout.includes('Documentation generated successfully')) {
-    console.log(stderr);
     return;
   }
   console.log('Generated base Widoco documentation');
@@ -34,9 +34,14 @@ const Config = require('./config'),
   const sectionFolder = Path.join(Config.outPath, 'sections');
   for (const f of textFiles) {
 
+    // skip acknowledgments; will be handled differently at the end
+    if( f == 'acknowledgements.md' ) {
+      continue;
+    }
+
     // path to target file
     const targetFile = f.replace('.md', '-en.html'),
-      targetPath = Path.join(sectionFolder, targetFile);
+          targetPath = Path.join(sectionFolder, targetFile);
 
     // skip files without equivalent
     if (!(await fileExists(targetPath))) {
@@ -70,7 +75,7 @@ const Config = require('./config'),
     } )
     .remove();
   // add the new ack
-  $('#acknowledgements').append(Marked(raw));
+  $('#acknowledgments').append(Marked(raw));
   await Fs.writeFile(path, $('#root').html());
   console.log('   index-en.html');
 
@@ -105,10 +110,28 @@ const Config = require('./config'),
   await Fs.writeFile(path, $('#root').html());
   console.log('   crossref-en.html');
 
+  // cleanup - introduction-en.html
+  path = Path.join(Config.outPath, 'sections', 'introduction-en.html');
+  raw = await Fs.readFile(path, 'utf8');
+  $('#root').html(raw);
+  const removedNamespaces = [ 'iadopt', 'index-html', 'iso639-3', 'ontology' ];
+  $('#namespacedeclarations tr')
+    .each((_, tr) => {
+      const $tr = $(tr);
+      const ns = $tr.find('b')
+      if ( (ns.length > 0) && removedNamespaces.includes( ns.text() ) ) {
+        $tr.remove();
+      }
+    });
+  await Fs.writeFile(path, $('#root').html());
+  console.log('   introduction-en.html');
+
   // replace index file
   const indexTarget = Path.join(Config.outPath, 'index.html'),
-    indexSource = Path.join(Config.outPath, 'index-en.html');
-  await Fs.unlink(indexTarget);
+        indexSource = Path.join(Config.outPath, 'index-en.html');
+  if( await fileExists(indexTarget) ){
+    await Fs.unlink(indexTarget);
+  }
   await Fs.copyFile(indexSource, indexTarget);
   console.log('Copied index-en.html to index.html');
 
