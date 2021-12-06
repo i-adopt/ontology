@@ -114,15 +114,8 @@ const Config = require('./config'),
   path = Path.join(Config.outPath, 'sections', 'introduction-en.html');
   raw = await Fs.readFile(path, 'utf8');
   $('#root').html(raw);
-  const removedNamespaces = [ 'iadopt', 'index-html', 'iso639-3', 'ontology' ];
-  $('#namespacedeclarations tr')
-    .each((_, tr) => {
-      const $tr = $(tr);
-      const ns = $tr.find('b')
-      if ( (ns.length > 0) && removedNamespaces.includes( ns.text() ) ) {
-        $tr.remove();
-      }
-    });
+  // remove namespace table
+  $('#namespacedeclarations').remove();
   await Fs.writeFile(path, $('#root').html());
   console.log('   introduction-en.html');
 
