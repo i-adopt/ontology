@@ -1,0 +1,205 @@
+@prefix : <https://w3id.org/iadopt/ont> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix omv: <http://omv.ontoware.org/2005/05/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/iadopt/ont> .
+
+<https://w3id.org/iadopt/ont> rdf:type owl:Ontology ;
+                               owl:versionIRI <https://w3id.org/iadopt/ont/0.8.0> ;
+                               omv:conformsToKnowledgeRepresentationParadigm <https://www.isibang.ac.in/ns/mod/index.html#DescriptionLogics> ;
+                               omv:designedForOntologyTask "semantically precise description and mapping of variables" ;
+                               omv:hasFormalityLevel <https://www.isibang.ac.in/ns/mod/index.html#Schema> ;
+                               omv:hasOntologyLanguage <https://www.isibang.ac.in/ns/mod/index.html#OWL-DL> ;
+                               omv:hasOntologySyntax <https://www.isibang.ac.in/ns/mod/index.html#OWL/XML> ;
+                               omv:usedOntologyEngineeringMethodology <https://www.isibang.ac.in/ns/mod/index.html#MethOntology> ;
+                               omv:usedOntologyEngineeringTool "https://www.isibang.ac.in/ns/mod/index.html#Protege" ;
+                               dct:abstract "The I-ADOPT Framework ontology provides machine-readable variable descriptions in which the components are mapped to FAIR vocabulary terms." ;
+                               dct:contributor "John Graybeal, Stanford University, School of Medicine, USA, ORCID: 0000-0001-6875-5360" ,
+                                               "Robert Huber, University Bremen, Germany" ,
+                                               "Simon J D Cox , CSIRO Land and Water, Australia; ORCID: 0000-0002-3884-3420" ;
+                               dct:created "June 24, 2021" ;
+                               dct:creator "Alison Pamment, National Centre for Atmospheric Science / Centre for Environmental Data Analysis, STFC Rutherford Appleton Laboratory, UK, ORCID: 0000-0001-5040-4626" ,
+                                           "Anusuriya Devaraju, Terrestrial Ecosystem Research Network (TERN), University of Queensland, Australia, ORCID: 0000-0003-0870-3192" ,
+                                           "Barbara Magagna, Environment Agency Austria, ORCID: 0000-0003-2195-3997" ,
+                                           "Gwenaelle Moncoiffe, National Oceanography Centre, British Oceanographic Data Centre, UK, ORCID: 0000-0001-6559-4178" ,
+                                           "Maria Stoica, University of Colorado, Boulder , ORCID: 0000-0002-6612-3439" ,
+                                           "Sirko Schindler, Institute of Data Science, German Aerospace Center (DLR), ORCID: 0000-0002-0964-4457" ;
+                               dct:language <http://lexvo.org/id/iso639-3/eng> ;
+                               dct:license "CC BY 4.0" ;
+                               dct:title "I-ADOPT Framework ontology" ;
+                               rdfs:label "I-ADOPT Framework ontology" ;
+                               owl:versionInfo "0.8.0" ;
+                               dcat:keyword "observable property" ,
+                                            "variable" ;
+                               foaf:primaryTopic "Entity" ,
+                                                 "Property" ,
+                                                 "Variable" ;
+                               iop:acknowledgement "RDA WG I-ADOPT" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://omv.ontoware.org/2005/05/ontology#conformsToKnowledgeRepresentationParadigm
+omv:conformsToKnowledgeRepresentationParadigm rdf:type owl:AnnotationProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#designedForOntologyTask
+omv:designedForOntologyTask rdf:type owl:AnnotationProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#hasFormalityLevel
+omv:hasFormalityLevel rdf:type owl:AnnotationProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#hasOntologyLanguage
+omv:hasOntologyLanguage rdf:type owl:AnnotationProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#hasOntologySyntax
+omv:hasOntologySyntax rdf:type owl:AnnotationProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringMethodology
+omv:usedOntologyEngineeringMethodology rdf:type owl:AnnotationProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringTool
+omv:usedOntologyEngineeringTool rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/abstract
+dct:abstract rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+dct:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+dct:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dct:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/language
+dct:language rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/dcat#keyword
+dcat:keyword rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/primaryTopic
+foaf:primaryTopic rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/iadopt/ont/acknowledgement
+iop:acknowledgement rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/iadopt/ont/constrains
+iop:constrains rdf:type owl:ObjectProperty ;
+               rdfs:domain iop:Constraint ;
+               rdfs:range iop:Entity ;
+               rdfs:comment "A Constraint constains an Entitiy having a role in the Variable description." ;
+               rdfs:label "constrains" .
+
+
+###  https://w3id.org/iadopt/ont/hasConstraint
+iop:hasConstraint rdf:type owl:ObjectProperty ;
+                  rdfs:domain iop:Variable ;
+                  rdfs:range iop:Constraint ;
+                  rdfs:comment "A Variable has a Constraint, that confines an Entity involved in the observation." ;
+                  rdfs:label "hasConstraint" .
+
+
+###  https://w3id.org/iadopt/ont/hasContextObject
+iop:hasContextObject rdf:type owl:ObjectProperty ;
+                     rdfs:domain iop:Variable ;
+                     rdfs:range iop:Entity ;
+                     rdfs:comment "A Variable has an Entity that provides additional background information regarding the ObjectOfInterest." ;
+                     rdfs:label "hasContextObject" .
+
+
+###  https://w3id.org/iadopt/ont/hasMatrix
+iop:hasMatrix rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf iop:hasContextObject ;
+              rdfs:domain iop:Variable ;
+              rdfs:range iop:Entity ;
+              rdfs:comment "A Variable might have an Entity in which the ObjectOfInterest is contained." ;
+              rdfs:label "hasMatrix" .
+
+
+###  https://w3id.org/iadopt/ont/hasObjectOfInterest
+iop:hasObjectOfInterest rdf:type owl:ObjectProperty ;
+                        rdfs:domain iop:Variable ;
+                        rdfs:range iop:Entity ;
+                        rdfs:comment "A Variable has an Entity whose Property is observed." ;
+                        rdfs:label "hasObjectOfInterest" .
+
+
+###  https://w3id.org/iadopt/ont/hasProperty
+iop:hasProperty rdf:type owl:ObjectProperty ;
+                rdfs:domain iop:Variable ;
+                rdfs:range iop:Property ;
+                rdfs:comment "A Variable has a Property that characterizes an Entity." ;
+                rdfs:label "hasProperty" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/iadopt/ont/Constraint
+iop:Constraint rdf:type owl:Class ;
+               rdfs:comment "A Constraint limits the scope of the observation and confines the context to a particular state. It describes properties of the involved entities that are relevant to the particular observation." ;
+               rdfs:label "constraint" .
+
+
+###  https://w3id.org/iadopt/ont/Entity
+iop:Entity rdf:type owl:Class ;
+           rdfs:comment "An object or process that has a role in an observation. An Entity may play one of the following roles: ObjectOfInterest, ContextObject, Matrix. Whether the involvement of a particular entity is meaningful enough to include in the variable description depends on the specific context." ;
+           rdfs:label "entity" .
+
+
+###  https://w3id.org/iadopt/ont/Property
+iop:Property rdf:type owl:Class ;
+             rdfs:comment "A type of a characteristic of the ObjectOfInterest." ;
+             rdfs:label "property" .
+
+
+###  https://w3id.org/iadopt/ont/Variable
+iop:Variable rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Restriction ;
+                                   owl:onProperty iop:hasObjectOfInterest ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass iop:Entity
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty iop:hasProperty ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass iop:Property
+                                 ] ;
+             rdfs:comment "A description of something observed or derived, minimally consisting of  an ObjectOfInterest and its Property." ;
+             rdfs:label "variable" .
+
+
+###  Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi
