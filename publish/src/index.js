@@ -1,11 +1,15 @@
 const Config = require('./config'),
-  Glob = require('glob-promise'),
-  Cheerio = require('cheerio'),
-  Marked = require("marked"),
-  Path = require('path'),
-  Util = require('util'),
-  exec = Util.promisify(require('child_process').exec),
-  Fs = require('fs').promises;
+      Cheerio = require('cheerio'),
+      DateTime = require( 'luxon' ).DateTime,
+      Glob = require('glob-promise'),
+      Marked = require('marked'),
+      Mkdir = require( 'mkdirp' ),
+      Props = require('properties-reader'),
+      Rdf = require( 'rdflib'),
+      Fs = require('fs').promises,
+      Path = require( 'path' ),
+      Util = require('util'),
+      exec = Util.promisify(require('child_process').exec);
 
 !async function () {
 
@@ -20,9 +24,65 @@ const Config = require('./config'),
   const $ = Cheerio.load('<div id="root"></div>');
   let path, raw;
 
+  /* XXXXXXXXXXXXXXXXXXXXXXXXXXXX PREPARATION XXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+  // get ontology version number
+  let ontoVersion;
+  {
+    const onto = Rdf.graph();
+    const ontoRaw = await Fs.readFile( Config.ontFile, 'utf8' );
+    Rdf.parse(ontoRaw, onto, 'https://w3id.org/iadopt/ont', 'text/turtle' );
+    ontoVersion = onto.any(
+      Rdf.sym( 'https://w3id.org/iadopt/ont' ),
+      Rdf.sym( 'http://www.w3.org/2002/07/owl#versionInfo'),
+      undefined,
+      Rdf.sym('https://w3id.org/iadopt/ont')
+    ).value;
+  }
+
+  // create a copy of the ontology using the version number
+  {
+    const canonicalOntoVersion = ontoVersion.replace( /\./g, '_' );
+    const versionedPath = Path.join(
+      Path.dirname( Config.ontFile ),
+      Path.basename( Config.ontFile.replace( Path.extname( Config.ontFile ), `_${canonicalOntoVersion}.ttl` ) )
+    );
+    await Fs.copyFile( Config.ontFile, versionedPath );
+    console.log( `Stored versioned ontology under ${versionedPath}` );
+  }
+
+  // adjust Widoco config file
+  {
+
+    // get all available versions
+    const ontoFiles = await Glob( '*.ttl', { cwd: Path.dirname( Config.ontFile ) } );
+    const ontoVersions = ontoFiles
+      .map( (f) => f.match( /i-adopt_(\d+_\d+_\d+).ttl/i ) )  // all versions of our ontology
+      .filter( (f) => f )                                     // only include actual matches
+      .map( (v) => v[1].replace( /_/g, '.' ) )
+      .sort();
+
+    // get previous version number
+    const prevOntoVersion = ontoVersions[ ontoVersions.indexOf( ontoVersion ) - 1 ];
+
+    // replace in Widoco property file
+    const widocoProps = Props( Config.confFile );
+    widocoProps.set( 'thisVersionURI', Config.ontoPrefix + ontoVersion );
+    widocoProps.set( 'previousVersionURI', Config.ontoPrefix + prevOntoVersion );
+    widocoProps.set( 'dateOfRelease', DateTime.now().setLocale('en').toLocaleString( DateTime.DATE_FULL ) );
+    const citeAsRegexp = new RegExp( `${Config.ontoPrefix.replace( /\//g, '\\/' )}\\d+\\.\\d+\\.\\d+`, 'i' );
+    const citeAs = widocoProps.get( 'citeAs' ).replace( citeAsRegexp, Config.ontoPrefix + ontoVersion );
+    widocoProps.set( 'citeAs', citeAs );
+    await widocoProps.save( Config.confFile );
+    console.log( `Updated Widoco properties file to version ${ontoVersion}` );
+
+  }
+
+  /* XXXXXXXXXXXXXXXXXXXXXXXXXXXX DOCUMENTATION XXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
   // initial run of Widoco
   const { stdout, stderr } = await exec(`java -jar ${Config.widocoPath} -ontFile "${Config.ontFile}" -outFolder "${Config.outPath}" -confFile "${Config.confFile}" -webVowl -displayDirectImportsOnly -rewriteAll`);
-  console.log( stderr )
+  console.log( stderr );
   if (!stdout.includes('Documentation generated successfully')) {
     return;
   }
@@ -45,12 +105,12 @@ const Config = require('./config'),
 
     // skip files without equivalent
     if (!(await fileExists(targetPath))) {
-      console.log(`   unknown target file: ${targetFile}`)
+      console.log(`   unknown target file: ${targetFile}`);
       continue;
     }
 
     // load the source file
-    const source = await Fs.readFile(Path.join(Config.textFolder, f), 'utf8')
+    const source = await Fs.readFile(Path.join(Config.textFolder, f), 'utf8');
 
     // store the results in the target file
     const target = await Fs.readFile(targetPath, 'utf8');
@@ -80,7 +140,7 @@ const Config = require('./config'),
   console.log('   index-en.html');
 
   // cleanup - overview-en.html
-  console.log('Cleaning up files')
+  console.log('Cleaning up files');
   path = Path.join(Config.outPath, 'sections', 'overview-en.html');
   raw = await Fs.readFile(path, 'utf8');
   $('#root').html(raw);
@@ -133,6 +193,24 @@ const Config = require('./config'),
         jsonTarget = Path.join(Config.outPath, 'ontology.jsonld');
   await Fs.copyFile(jsonSource, jsonTarget);
   console.log('Copied ontology.json to ontology.jsonld');
+
+
+  /* XXXXXXXXXXXXXXXXXXXXXXXXXXXX ARCHIVE XXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+  // create an archive copy
+  const docFiles = (await Glob( '**/*.*', { cwd: Config.outPath } ))
+    .filter( (f) => !f.startsWith( 'archive' ) && !f.endsWith( '.md' ) );
+  const baseArchivePath = Path.join( Config.outPath, 'archive', ontoVersion );
+  await Mkdir( baseArchivePath );
+  for( const file of docFiles ) {
+    const targetPath = Path.join( baseArchivePath, file );
+    await Mkdir( Path.dirname( targetPath) );
+    await Fs.copyFile(
+      Path.join( Config.outPath, file ),
+      targetPath
+    );
+  }
+  console.log( `Moved ${docFiles.length} files to archive folder ${baseArchivePath}` );
 
 }()
   .catch((e) => console.error(e));

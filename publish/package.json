@@ -1,8 +1,7 @@
 {
   "name": "iadopt-ontology-publish",
   "version": "1.0.0",
-  "description": "prepare w3id publication of IAdopt ontology",
-  "main": "src/index.js",
+  "description": "prepare w3id publication of the IAdopt ontology",
   "scripts": {
     "prepare": "node src/index.js"
   },
@@ -12,6 +11,10 @@
     "cheerio": "^1.0.0-rc.10",
     "glob": "^7.1.7",
     "glob-promise": "^4.2.0",
-    "marked": "^2.1.3"
+    "luxon": "^2.2.0",
+    "marked": "^2.1.3",
+    "mkdirp": "^1.0.4",
+    "properties-reader": "^2.2.0",
+    "rdflib": "^2.2.13"
   }
 }

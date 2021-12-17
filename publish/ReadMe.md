@@ -13,5 +13,8 @@ The scripts included here are used to automate the process of publishing the IAd
 
 The following fixes are applied which currently are difficult to impossible with [Widoco](http://dgarijo.github.io/Widoco/):
 
+* Pull the versionIRI from the ontology
+* update Widoco conf with latest version number
 * Include custom abstract / description / introduction / references from `/widoco/texts`
 * Remove descriptions outside of the ontology
+* Create an archive copy of all files
