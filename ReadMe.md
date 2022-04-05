@@ -1,7 +1,7 @@
 # I-ADOPT Ontology
 
 This repository holds the sources for the I-ADOPT ontology (see [/ontology](/ontology)).
-For the latest version, check [www.w3id.org/iadopt/](https//www.w3id.org/iadopt/).
+For the latest version, check [www.w3id.org/iadopt/](https://i-adopt.github.io/index.html).
 
 If you encounter any issues or have more suggestions, please open and issue and we will come back to you.
 
