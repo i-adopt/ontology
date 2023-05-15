@@ -11,6 +11,7 @@ const Config = require('./config'),
       Util = require('util'),
       exec = Util.promisify(require('child_process').exec);
 
+
 !async function () {
 
   // verify that all paths exist
@@ -135,7 +136,7 @@ const Config = require('./config'),
     } )
     .remove();
   // add the new ack
-  $('#acknowledgments').append(Marked(raw));
+  $('#acknowledgments').append(Marked.parse(raw));
   await Fs.writeFile(path, $('#root').html());
   console.log('   index-en.html');
 
