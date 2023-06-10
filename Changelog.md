@@ -2,7 +2,14 @@
 
 ## unpublished changes
 
+* -
+
+## 1.0.0
+
+* added class `VariableSet`
+* added properties `hasApplicableContextObject`, `hasApplicableMatrix`, `hasApplicableObjectOfInterest`, and `hasApplicableProperty`
 * switch to turtle as the main serialization
+* swapped ontology visualization
 
 ## 0.9.1
 
