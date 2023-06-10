@@ -11,6 +11,7 @@ const Config = require('./config'),
       Util = require('util'),
       exec = Util.promisify(require('child_process').exec);
 
+
 !async function () {
 
   // verify that all paths exist
@@ -135,9 +136,26 @@ const Config = require('./config'),
     } )
     .remove();
   // add the new ack
-  $('#acknowledgments').append(Marked(raw));
+  $('#acknowledgments').append(Marked.parse(raw));
   await Fs.writeFile(path, $('#root').html());
   console.log('   index-en.html');
+
+  // replace webvowl by custom SVG
+  path = Path.join(Config.outPath, 'sections', 'overview-en.html');
+  raw = await Fs.readFile(path, 'utf8');
+  $('#root').html(raw);
+  raw = await Fs.readFile(Path.join(Config.textFolder, 'IAdopt.svg'), 'utf8');
+  // clean out the old webvowl
+  $('iframe').remove(); // first <p> is Widoco acknowledgement
+  // add the new SVG
+  $('#root').append(`
+    <div style="text-align: center; padding: 2em;">
+      ${raw}
+    </div>
+  `);
+  await Fs.writeFile(path, $('#root').html());
+  console.log('   overview-en.html');
+
 
   // cleanup - overview-en.html
   console.log('Cleaning up files');
