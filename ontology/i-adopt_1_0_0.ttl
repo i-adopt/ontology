@@ -9,7 +9,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/iadopt/ont/> .
+@base <https://w3id.org/iadopt/ont> .
 
 <https://w3id.org/iadopt/ont> rdf:type owl:Ontology ;
                                owl:versionIRI <https://w3id.org/iadopt/ont/1.0.0> ;
@@ -114,16 +114,16 @@ foaf:primaryTopic rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://w3id.org/iadopt/ont/hasApplicableContextObject
-iop:hasApplicableContextObject rdf:type owl:ObjectProperty ;
+###  https://w3id.org/iadopt/ont#hasApplicableContextObject
+:hasApplicableContextObject rdf:type owl:ObjectProperty ;
                             rdfs:domain :VariableSet ;
                             rdfs:range iop:Entity ;
                             rdfs:comment "A VariableSet has zero or many applicable ContextObjects." ;
                             rdfs:label "hasApplicableContextObject" .
 
 
-###  https://w3id.org/iadopt/ont/hasApplicableMatrix
-iop:hasApplicableMatrix rdf:type owl:ObjectProperty ;
+###  https://w3id.org/iadopt/ont#hasApplicableMatrix
+:hasApplicableMatrix rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :hasApplicableContextObject ;
                      rdfs:domain :VariableSet ;
                      rdfs:range iop:Entity ;
@@ -131,16 +131,16 @@ iop:hasApplicableMatrix rdf:type owl:ObjectProperty ;
                      rdfs:label "hasApplicableMatrix" .
 
 
-###  https://w3id.org/iadopt/ont/hasApplicableObjectOfInterest
-iop:hasApplicableObjectOfInterest rdf:type owl:ObjectProperty ;
+###  https://w3id.org/iadopt/ont#hasApplicableObjectOfInterest
+:hasApplicableObjectOfInterest rdf:type owl:ObjectProperty ;
                                rdfs:domain :VariableSet ;
                                rdfs:range iop:Entity ;
                                rdfs:comment "A VariableSet has one or more applicable ObjectOfInterest." ;
                                rdfs:label "hasApplicableObjectOfInterest" .
 
 
-###  https://w3id.org/iadopt/ont/hasApplicableProperty
-iop:hasApplicableProperty rdf:type owl:ObjectProperty ;
+###  https://w3id.org/iadopt/ont#hasApplicableProperty
+:hasApplicableProperty rdf:type owl:ObjectProperty ;
                        rdfs:domain :VariableSet ;
                        rdfs:range iop:Property ;
                        rdfs:comment "A VariableSet has one or more applicable Properties." ;
@@ -200,8 +200,8 @@ iop:hasProperty rdf:type owl:ObjectProperty ;
 #    Classes
 #################################################################
 
-###  https://w3id.org/iadopt/ont/VariableSet
-iop:VariableSet rdf:type owl:Class ;
+###  https://w3id.org/iadopt/ont#VariableSet
+:VariableSet rdf:type owl:Class ;
              rdfs:comment "An aggregation class to group a set of variable for a specific purpose." ;
              rdfs:label "VariableSet" .
 
