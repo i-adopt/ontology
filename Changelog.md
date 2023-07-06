@@ -4,6 +4,10 @@
 
 * -
 
+## 1.0.1
+
+* fix bug: replacing `#` by `/` in newly added concepts and properties (thanks to @marc-portier)
+
 ## 1.0.0
 
 * added class `VariableSet`
