@@ -197,6 +197,64 @@ const Config = require('./config'),
   await Fs.writeFile(path, $('#root').html());
   console.log('   introduction-en.html');
 
+  /* XXXXXXXXXXXXXXXXXXXXXXXXXXXX COMBINATION XXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+  path = Path.join(Config.outPath, 'index-en.html' );
+  raw = await Fs.readFile(path, 'utf8');
+  const jQuery = Cheerio.load(raw);
+
+  // after widoco sources
+  function loadTOC(){
+    //process toc dynamically
+    var t='<h2>Table of contents</h2><ul>', i = 1, j=0;
+    jQuery('.list').each(function(){
+      // https://stackoverflow.com/a/8851526/1169798
+      const text = jQuery(this)
+        .clone()
+        .children()
+        .remove()
+        .end()
+        .text();
+      if(jQuery(this).is('h2')){
+        if(j>0){
+          t+='</ul>';
+          j=0;
+        }
+        t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ text +'</a></li>';
+        i++;
+      }
+      if(jQuery(this).is('h3')){
+        if(j==0){
+          t+='<ul>';
+        }
+        j++;
+        t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ text +'</a></li>';
+      }
+    });
+    t+='</ul>';
+    jQuery('#toc').html(t);
+  }
+
+  // combine all files
+  console.log( 'Combining files' );
+  for( const section of [ 'abstract', 'introduction', 'overview', 'description', 'references', 'changelog', 'crossref' ]) {
+    path = Path.join(Config.outPath, 'sections', `${section}-en.html`);
+    raw = await Fs.readFile(path, 'utf8');
+    jQuery(`#${section}`).html( raw );
+    console.log( `   ${section}` );
+  }
+  loadTOC();
+
+  // remove now unused script tag
+  jQuery( 'script:not([type="application/ld+json"])' ).remove();
+
+  // write back to file
+  path = Path.join(Config.outPath, 'index-en.html' );
+  await Fs.writeFile(path, jQuery.html());
+  console.log( `   written to ${path}` );
+
+  /* XXXXXXXXXXXXXXXXXXXXXXXXXXXX POSTPROCESSING XXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
   // replace index file
   const indexTarget = Path.join(Config.outPath, 'index.html'),
         indexSource = Path.join(Config.outPath, 'index-en.html');
