@@ -1,9 +1,9 @@
 const Config = require('./config'),
       Cheerio = require('cheerio'),
       DateTime = require( 'luxon' ).DateTime,
-      Glob = require('glob-promise'),
+      Glob = require('glob').glob,
       Marked = require('marked'),
-      Mkdir = require( 'mkdirp' ),
+      Mkdir = require( 'mkdirp' ).mkdirp,
       Props = require('properties-reader'),
       Rdf = require( 'rdflib'),
       Fs = require('fs').promises,
@@ -112,11 +112,16 @@ const Config = require('./config'),
 
     // load the source file
     const source = await Fs.readFile(Path.join(Config.textFolder, f), 'utf8');
+    const parsed = Marked.parse( source );
+
+    if( f == 'introduction.md' ) {
+      console.log( parsed );
+    }
 
     // store the results in the target file
     const target = await Fs.readFile(targetPath, 'utf8');
     $('#root').html(target);
-    $('.markdown').html(source);
+    $('.markdown').html(parsed);
     await Fs.writeFile(targetPath, $('#root').html());
     console.log(`   appended to ${targetFile}`);
 
