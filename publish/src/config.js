@@ -5,7 +5,7 @@ module.exports = {
   ontoPrefix: 'https://w3id.org/iadopt/ont/',
 
   // redirect output to
-  outPath: Path.join(__dirname, '..', '..', '..', 'i-adopt.github.io'),
+  outPath: Path.join(__dirname, '..', '..', 'gh-pages'),
 
   // path to the widoco executable
   widocoPath: Path.join(__dirname, '..', '..', '..', 'widoco-1.4.14-jar-with-dependencies.jar'),

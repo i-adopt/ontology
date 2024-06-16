@@ -114,10 +114,6 @@ const Config = require('./config'),
     const source = await Fs.readFile(Path.join(Config.textFolder, f), 'utf8');
     const parsed = Marked.parse( source );
 
-    if( f == 'introduction.md' ) {
-      console.log( parsed );
-    }
-
     // store the results in the target file
     const target = await Fs.readFile(targetPath, 'utf8');
     $('#root').html(target);
@@ -246,7 +242,6 @@ const Config = require('./config'),
     path = Path.join(Config.outPath, 'sections', `${section}-en.html`);
     raw = await Fs.readFile(path, 'utf8');
     jQuery(`#${section}`).html( raw );
-    console.log( `   ${section}` );
   }
   loadTOC();
 
