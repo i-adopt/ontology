@@ -21,7 +21,7 @@
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Gwenaelle Moncoiffe, National Oceanography Centre, British Oceanographic Data Centre, UK, ORCID: 0000-0001-6559-4178",
+        "value" : "Sirko Schindler, Institute of Data Science, German Aerospace Center (DLR), ORCID: 0000-0002-0964-4457",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -31,7 +31,7 @@
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Barbara Magagna, Environment Agency Austria, ORCID: 0000-0003-2195-3997",
+        "value" : "Gwenaelle Moncoiffe, National Oceanography Centre, British Oceanographic Data Centre, UK, ORCID: 0000-0001-6559-4178",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -41,7 +41,7 @@
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Sirko Schindler, Institute of Data Science, German Aerospace Center (DLR), ORCID: 0000-0002-0964-4457",
+        "value" : "Barbara Magagna, Environment Agency Austria, ORCID: 0000-0003-2195-3997",
         "type" : "label"
       } ],
       "conformsToKnowledgeRepresentationParadigm" : [ {
@@ -68,16 +68,16 @@
         "value" : "http://lexvo.org/id/iso639-3/eng",
         "type" : "iri"
       } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
-        "language" : "undefined",
-        "value" : "1.0.3",
-        "type" : "label"
-      } ],
       "abstract" : [ {
         "identifier" : "abstract",
         "language" : "undefined",
         "value" : "The I-ADOPT Framework ontology provides machine-readable variable descriptions in which the components are mapped to FAIR vocabulary terms.",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0.3",
         "type" : "label"
       } ],
       "title" : [ {
@@ -117,7 +117,7 @@
       "primaryTopic" : [ {
         "identifier" : "primaryTopic",
         "language" : "undefined",
-        "value" : "Variable",
+        "value" : "Entity",
         "type" : "label"
       }, {
         "identifier" : "primaryTopic",
@@ -127,7 +127,7 @@
       }, {
         "identifier" : "primaryTopic",
         "language" : "undefined",
-        "value" : "Entity",
+        "value" : "Variable",
         "type" : "label"
       } ],
       "hasOntologyLanguage" : [ {
@@ -169,7 +169,7 @@
   },
   "namespace" : [ ],
   "class" : [ {
-    "id" : "5",
+    "id" : "6",
     "type" : "owl:Class"
   }, {
     "id" : "2",
@@ -196,7 +196,7 @@
       "undefined" : "A type of a characteristic of the ObjectOfInterest."
     },
     "attributes" : [ "external" ],
-    "id" : "5"
+    "id" : "6"
   }, {
     "iri" : "https://w3id.org/iadopt/ont/Entity",
     "baseIri" : "https://w3id.org/iadopt/ont",
@@ -257,7 +257,7 @@
     "id" : "4",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "6",
+    "id" : "5",
     "type" : "owl:objectProperty"
   }, {
     "id" : "7",
@@ -313,7 +313,7 @@
   }, {
     "iri" : "https://w3id.org/iadopt/ont/hasProperty",
     "baseIri" : "https://w3id.org/iadopt/ont",
-    "range" : "5",
+    "range" : "6",
     "label" : {
       "IRI-based" : "hasProperty",
       "undefined" : "hasProperty"
@@ -323,11 +323,11 @@
       "undefined" : "A Variable has a Property that characterizes an Entity."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "6"
+    "id" : "5"
   }, {
     "iri" : "https://w3id.org/iadopt/ont/hasApplicableProperty",
     "baseIri" : "https://w3id.org/iadopt/ont",
-    "range" : "5",
+    "range" : "6",
     "label" : {
       "IRI-based" : "hasApplicableProperty",
       "undefined" : "hasApplicableProperty"

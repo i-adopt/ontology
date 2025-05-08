@@ -70,7 +70,7 @@ const Config = require('./config'),
     const widocoProps = Props( Config.confFile );
     widocoProps.set( 'thisVersionURI', Config.ontoPrefix + ontoVersion );
     widocoProps.set( 'previousVersionURI', Config.ontoPrefix + prevOntoVersion );
-    widocoProps.set( 'dateOfRelease', DateTime.now().setLocale('en').toLocaleString( DateTime.DATE_FULL ) );
+    widocoProps.set( 'dateCreated', DateTime.now().setLocale('en').toLocaleString( DateTime.DATE_FULL ) );
     const citeAsRegexp = new RegExp( `${Config.ontoPrefix.replace( /\//g, '\\/' )}\\d+\\.\\d+\\.\\d+`, 'i' );
     const citeAs = widocoProps.get( 'citeAs' ).replace( citeAsRegexp, Config.ontoPrefix + ontoVersion );
     widocoProps.set( 'citeAs', citeAs );

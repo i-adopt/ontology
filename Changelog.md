@@ -4,6 +4,14 @@
 
 * -
 
+## 1.1.0
+
+* added `StatisticalModifier` and `hasStatisticalModifier`
+* added `System`, `SymmetricSystem`, and `AsymmetricSystem`
+* added `hasPart`, `hasNumerator`, `hasDenominator`, `hasSource`, and `hasTarget`
+* adjusted range of `constrains`
+* adapted visualizations
+
 ## 1.0.1 - 1.0.3
 
 * fix bug: replacing `#` by `/` in newly added concepts and properties (thanks to @marc-portier)

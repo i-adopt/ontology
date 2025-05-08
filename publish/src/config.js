@@ -8,7 +8,7 @@ module.exports = {
   outPath: Path.join(__dirname, '..', '..', 'docs'),
 
   // path to the widoco executable
-  widocoPath: Path.join(__dirname, '..', '..', '..', 'widoco-1.4.14-jar-with-dependencies.jar'),
+  widocoPath: Path.join(__dirname, '..', '..', '..', 'widoco-1.4.25-jar-with-dependencies_JDK-11.jar'),
 
   // path to the ontology file
   ontFile: Path.join(__dirname, '..', '..', 'ontology', 'i-adopt.ttl'),
