@@ -383,10 +383,10 @@
     "id" : "28",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "5",
+    "id" : "29",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "29",
+    "id" : "5",
     "type" : "owl:objectProperty"
   }, {
     "id" : "23",
@@ -584,6 +584,20 @@
     "attributes" : [ "external", "object" ],
     "id" : "28"
   }, {
+    "iri" : "https://w3id.org/iadopt/ont/hasPart",
+    "baseIri" : "https://w3id.org/iadopt/ont",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasPart",
+      "undefined" : "has part"
+    },
+    "domain" : "12",
+    "comment" : {
+      "undefined" : "A relation between a system and its part."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "29"
+  }, {
     "iri" : "https://w3id.org/iadopt/ont/hasMatrix",
     "baseIri" : "https://w3id.org/iadopt/ont",
     "range" : "4",
@@ -598,20 +612,6 @@
     },
     "attributes" : [ "external", "object" ],
     "id" : "5"
-  }, {
-    "iri" : "https://w3id.org/iadopt/ont/hasPart",
-    "baseIri" : "https://w3id.org/iadopt/ont",
-    "range" : "4",
-    "label" : {
-      "IRI-based" : "hasPart",
-      "undefined" : "has part"
-    },
-    "domain" : "12",
-    "comment" : {
-      "undefined" : "A relation between a system and its part."
-    },
-    "attributes" : [ "external", "object" ],
-    "id" : "29"
   }, {
     "iri" : "https://w3id.org/iadopt/ont/hasTarget",
     "baseIri" : "https://w3id.org/iadopt/ont",
