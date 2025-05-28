@@ -383,10 +383,10 @@
     "id" : "28",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "29",
+    "id" : "5",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "5",
+    "id" : "29",
     "type" : "owl:objectProperty"
   }, {
     "id" : "23",
@@ -414,7 +414,7 @@
     "comment" : {
       "undefined" : "A Variable has an Entity that provides additional background information regarding the ObjectOfInterest."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "2"
   }, {
     "iri" : "https://w3id.org/iadopt/ont/hasProperty",
@@ -428,7 +428,7 @@
     "comment" : {
       "undefined" : "A Variable has a Property that characterizes an Entity."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "6"
   }, {
     "iri" : "https://w3id.org/iadopt/ont/hasApplicableProperty",
@@ -442,7 +442,7 @@
     "comment" : {
       "undefined" : "A VariableSet has one or more applicable Properties."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "8"
   }, {
     "iri" : "https://w3id.org/iadopt/ont/hasApplicableContextObject",
@@ -457,22 +457,22 @@
     "comment" : {
       "undefined" : "A VariableSet has zero or many applicable ContextObjects."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "10"
   }, {
     "range" : "1",
     "domain" : "0",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "13"
   }, {
     "range" : "1",
     "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "14"
   }, {
     "range" : "4",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "15"
   }, {
     "iri" : "https://w3id.org/iadopt/ont/hasDenominator",
@@ -480,13 +480,13 @@
     "range" : "4",
     "label" : {
       "IRI-based" : "hasDenominator",
-      "undefined" : "has denominator"
+      "undefined" : "has Denominator"
     },
     "domain" : "0",
     "comment" : {
       "undefined" : "In a system that represents a fraction, this relation assign the role of the denominator."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "16"
   }, {
     "iri" : "https://w3id.org/iadopt/ont/hasApplicableStatisticalModifier",
@@ -500,7 +500,7 @@
     "comment" : {
       "undefined" : "A VariableSet has one or more applicable StatisticalModifier."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "18"
   }, {
     "iri" : "https://w3id.org/iadopt/ont/hasConstraint",
@@ -514,7 +514,7 @@
     "comment" : {
       "undefined" : "A Variable has a Constraint, that confines an Entity involved in the observation."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "19"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
@@ -525,7 +525,7 @@
     },
     "domain" : "22",
     "subproperty" : [ "23" ],
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "21"
   }, {
     "iri" : "https://w3id.org/iadopt/ont/hasSource",
@@ -533,13 +533,13 @@
     "range" : "4",
     "label" : {
       "IRI-based" : "hasSource",
-      "undefined" : "has source"
+      "undefined" : "has Source"
     },
     "domain" : "0",
     "comment" : {
       "undefined" : "In a system that represents a flux or flow, this relation assign the role of the source of that flux or flow."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "25"
   }, {
     "iri" : "https://w3id.org/iadopt/ont/hasObjectOfInterest",
@@ -553,7 +553,7 @@
     "comment" : {
       "undefined" : "A Variable has an Entity whose Property is observed."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "26"
   }, {
     "iri" : "https://w3id.org/iadopt/ont/hasStatisticalModifier",
@@ -567,7 +567,7 @@
     "comment" : {
       "undefined" : "A Variable might have a StatisticalModifier that was applied to the observed property."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "27"
   }, {
     "iri" : "https://w3id.org/iadopt/ont/constrains",
@@ -581,22 +581,8 @@
     "comment" : {
       "undefined" : "A Constraint constrains other components in the Variable description."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "28"
-  }, {
-    "iri" : "https://w3id.org/iadopt/ont/hasPart",
-    "baseIri" : "https://w3id.org/iadopt/ont",
-    "range" : "4",
-    "label" : {
-      "IRI-based" : "hasPart",
-      "undefined" : "has part"
-    },
-    "domain" : "12",
-    "comment" : {
-      "undefined" : "A relation between a system and its part."
-    },
-    "attributes" : [ "external", "object" ],
-    "id" : "29"
   }, {
     "iri" : "https://w3id.org/iadopt/ont/hasMatrix",
     "baseIri" : "https://w3id.org/iadopt/ont",
@@ -610,22 +596,36 @@
     "comment" : {
       "undefined" : "A Variable might have an Entity in which the ObjectOfInterest is contained."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "5"
+  }, {
+    "iri" : "https://w3id.org/iadopt/ont/hasPart",
+    "baseIri" : "https://w3id.org/iadopt/ont",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasPart",
+      "undefined" : "has Part"
+    },
+    "domain" : "12",
+    "comment" : {
+      "undefined" : "A relation between a system and its part."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "29"
   }, {
     "iri" : "https://w3id.org/iadopt/ont/hasTarget",
     "baseIri" : "https://w3id.org/iadopt/ont",
     "range" : "4",
     "label" : {
       "IRI-based" : "hasTarget",
-      "undefined" : "has target"
+      "undefined" : "has Target"
     },
     "superproperty" : [ "21" ],
     "domain" : "0",
     "comment" : {
       "undefined" : "In a system that represents a flux or flow, this relation assign the role of the target or sink of that flux or flow."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "23"
   }, {
     "iri" : "https://w3id.org/iadopt/ont/hasApplicableMatrix",
@@ -633,15 +633,29 @@
     "range" : "4",
     "label" : {
       "IRI-based" : "hasApplicableMatrix",
-      "undefined" : "has Applicable Matrix"
+      "undefined" : "has applicable Matrix"
     },
     "superproperty" : [ "10" ],
     "domain" : "9",
     "comment" : {
       "undefined" : "A VariableSet has zero or many applicable Matrices."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "11"
+  }, {
+    "iri" : "https://w3id.org/iadopt/ont/hasNumerator",
+    "baseIri" : "https://w3id.org/iadopt/ont",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasNumerator",
+      "undefined" : "has Numerator"
+    },
+    "domain" : "0",
+    "comment" : {
+      "undefined" : "In a system that represents a fraction, this relation assign the role of the numerator."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "30"
   }, {
     "iri" : "https://w3id.org/iadopt/ont/hasApplicableObjectOfInterest",
     "baseIri" : "https://w3id.org/iadopt/ont",
@@ -654,21 +668,7 @@
     "comment" : {
       "undefined" : "A VariableSet has one or more applicable ObjectOfInterest."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "30"
-  }, {
-    "iri" : "https://w3id.org/iadopt/ont/hasNumerator",
-    "baseIri" : "https://w3id.org/iadopt/ont",
-    "range" : "4",
-    "label" : {
-      "IRI-based" : "hasNumerator",
-      "undefined" : "has numerator"
-    },
-    "domain" : "0",
-    "comment" : {
-      "undefined" : "In a system that represents a fraction, this relation assign the role of the numerator."
-    },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "31"
   } ]
 }

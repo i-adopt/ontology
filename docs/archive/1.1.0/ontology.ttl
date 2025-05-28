@@ -136,7 +136,7 @@
                                                   rdfs:domain <https://w3id.org/iadopt/ont/VariableSet> ;
                                                   rdfs:range <https://w3id.org/iadopt/ont/Entity> ;
                                                   rdfs:comment "A VariableSet has zero or many applicable Matrices." ;
-                                                  rdfs:label "has Applicable Matrix" .
+                                                  rdfs:label "has applicable Matrix" .
 
 
 ###  https://w3id.org/iadopt/ont/hasApplicableObjectOfInterest
@@ -184,7 +184,7 @@
                                              rdfs:domain <https://w3id.org/iadopt/ont/AsymmetricSystem> ;
                                              rdfs:range <https://w3id.org/iadopt/ont/Entity> ;
                                              rdfs:comment "In a system that represents a fraction, this relation assign the role of the denominator." ;
-                                             rdfs:label "has denominator" .
+                                             rdfs:label "has Denominator" .
 
 
 ###  https://w3id.org/iadopt/ont/hasMatrix
@@ -201,7 +201,7 @@
                                            rdfs:domain <https://w3id.org/iadopt/ont/AsymmetricSystem> ;
                                            rdfs:range <https://w3id.org/iadopt/ont/Entity> ;
                                            rdfs:comment "In a system that represents a fraction, this relation assign the role of the numerator." ;
-                                           rdfs:label "has numerator" .
+                                           rdfs:label "has Numerator" .
 
 
 ###  https://w3id.org/iadopt/ont/hasObjectOfInterest
@@ -217,7 +217,7 @@
                                       rdfs:domain <https://w3id.org/iadopt/ont/SymmetricSystem> ;
                                       rdfs:range <https://w3id.org/iadopt/ont/Entity> ;
                                       rdfs:comment "A relation between a system and its part." ;
-                                      rdfs:label "has part" .
+                                      rdfs:label "has Part" .
 
 
 ###  https://w3id.org/iadopt/ont/hasProperty
@@ -233,7 +233,7 @@
                                         rdfs:domain <https://w3id.org/iadopt/ont/AsymmetricSystem> ;
                                         rdfs:range <https://w3id.org/iadopt/ont/Entity> ;
                                         rdfs:comment "In a system that represents a flux or flow, this relation assign the role of the source of that flux or flow." ;
-                                        rdfs:label "has source" .
+                                        rdfs:label "has Source" .
 
 
 ###  https://w3id.org/iadopt/ont/hasStatisticalModifier
@@ -250,7 +250,7 @@
                                         rdfs:domain <https://w3id.org/iadopt/ont/AsymmetricSystem> ;
                                         rdfs:range <https://w3id.org/iadopt/ont/Entity> ;
                                         rdfs:comment "In a system that represents a flux or flow, this relation assign the role of the target or sink of that flux or flow." ;
-                                        rdfs:label "has target" .
+                                        rdfs:label "has Target" .
 
 
 #################################################################

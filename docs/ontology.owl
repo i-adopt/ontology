@@ -220,7 +220,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/iadopt/ont/VariableSet"/>
         <rdfs:range rdf:resource="https://w3id.org/iadopt/ont/Entity"/>
         <rdfs:comment>A VariableSet has zero or many applicable Matrices.</rdfs:comment>
-        <rdfs:label>has Applicable Matrix</rdfs:label>
+        <rdfs:label>has applicable Matrix</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -292,7 +292,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/iadopt/ont/AsymmetricSystem"/>
         <rdfs:range rdf:resource="https://w3id.org/iadopt/ont/Entity"/>
         <rdfs:comment>In a system that represents a fraction, this relation assign the role of the denominator.</rdfs:comment>
-        <rdfs:label>has denominator</rdfs:label>
+        <rdfs:label>has Denominator</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -317,7 +317,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/iadopt/ont/AsymmetricSystem"/>
         <rdfs:range rdf:resource="https://w3id.org/iadopt/ont/Entity"/>
         <rdfs:comment>In a system that represents a fraction, this relation assign the role of the numerator.</rdfs:comment>
-        <rdfs:label>has numerator</rdfs:label>
+        <rdfs:label>has Numerator</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -341,7 +341,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/iadopt/ont/SymmetricSystem"/>
         <rdfs:range rdf:resource="https://w3id.org/iadopt/ont/Entity"/>
         <rdfs:comment>A relation between a system and its part.</rdfs:comment>
-        <rdfs:label>has part</rdfs:label>
+        <rdfs:label>has Part</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -365,7 +365,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/iadopt/ont/AsymmetricSystem"/>
         <rdfs:range rdf:resource="https://w3id.org/iadopt/ont/Entity"/>
         <rdfs:comment>In a system that represents a flux or flow, this relation assign the role of the source of that flux or flow.</rdfs:comment>
-        <rdfs:label>has source</rdfs:label>
+        <rdfs:label>has Source</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -390,7 +390,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/iadopt/ont/AsymmetricSystem"/>
         <rdfs:range rdf:resource="https://w3id.org/iadopt/ont/Entity"/>
         <rdfs:comment>In a system that represents a flux or flow, this relation assign the role of the target or sink of that flux or flow.</rdfs:comment>
-        <rdfs:label>has target</rdfs:label>
+        <rdfs:label>has Target</rdfs:label>
     </owl:ObjectProperty>
     
 

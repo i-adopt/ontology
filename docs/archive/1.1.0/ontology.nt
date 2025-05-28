@@ -125,7 +125,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/iadopt/ont/hasApplicableMatrix> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iadopt/ont/VariableSet> .
 <https://w3id.org/iadopt/ont/hasApplicableMatrix> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iadopt/ont/Entity> .
 <https://w3id.org/iadopt/ont/hasApplicableMatrix> <http://www.w3.org/2000/01/rdf-schema#comment> "A VariableSet has zero or many applicable Matrices." .
-<https://w3id.org/iadopt/ont/hasApplicableMatrix> <http://www.w3.org/2000/01/rdf-schema#label> "has Applicable Matrix" .
+<https://w3id.org/iadopt/ont/hasApplicableMatrix> <http://www.w3.org/2000/01/rdf-schema#label> "has applicable Matrix" .
 # 
 # https://w3id.org/iadopt/ont/hasApplicableObjectOfInterest
 <https://w3id.org/iadopt/ont/hasApplicableObjectOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -167,7 +167,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/iadopt/ont/hasDenominator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iadopt/ont/AsymmetricSystem> .
 <https://w3id.org/iadopt/ont/hasDenominator> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iadopt/ont/Entity> .
 <https://w3id.org/iadopt/ont/hasDenominator> <http://www.w3.org/2000/01/rdf-schema#comment> "In a system that represents a fraction, this relation assign the role of the denominator." .
-<https://w3id.org/iadopt/ont/hasDenominator> <http://www.w3.org/2000/01/rdf-schema#label> "has denominator" .
+<https://w3id.org/iadopt/ont/hasDenominator> <http://www.w3.org/2000/01/rdf-schema#label> "has Denominator" .
 # 
 # https://w3id.org/iadopt/ont/hasMatrix
 <https://w3id.org/iadopt/ont/hasMatrix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -182,7 +182,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/iadopt/ont/hasNumerator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iadopt/ont/AsymmetricSystem> .
 <https://w3id.org/iadopt/ont/hasNumerator> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iadopt/ont/Entity> .
 <https://w3id.org/iadopt/ont/hasNumerator> <http://www.w3.org/2000/01/rdf-schema#comment> "In a system that represents a fraction, this relation assign the role of the numerator." .
-<https://w3id.org/iadopt/ont/hasNumerator> <http://www.w3.org/2000/01/rdf-schema#label> "has numerator" .
+<https://w3id.org/iadopt/ont/hasNumerator> <http://www.w3.org/2000/01/rdf-schema#label> "has Numerator" .
 # 
 # https://w3id.org/iadopt/ont/hasObjectOfInterest
 <https://w3id.org/iadopt/ont/hasObjectOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -196,7 +196,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/iadopt/ont/hasPart> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iadopt/ont/SymmetricSystem> .
 <https://w3id.org/iadopt/ont/hasPart> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iadopt/ont/Entity> .
 <https://w3id.org/iadopt/ont/hasPart> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a system and its part." .
-<https://w3id.org/iadopt/ont/hasPart> <http://www.w3.org/2000/01/rdf-schema#label> "has part" .
+<https://w3id.org/iadopt/ont/hasPart> <http://www.w3.org/2000/01/rdf-schema#label> "has Part" .
 # 
 # https://w3id.org/iadopt/ont/hasProperty
 <https://w3id.org/iadopt/ont/hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -210,7 +210,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/iadopt/ont/hasSource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iadopt/ont/AsymmetricSystem> .
 <https://w3id.org/iadopt/ont/hasSource> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iadopt/ont/Entity> .
 <https://w3id.org/iadopt/ont/hasSource> <http://www.w3.org/2000/01/rdf-schema#comment> "In a system that represents a flux or flow, this relation assign the role of the source of that flux or flow." .
-<https://w3id.org/iadopt/ont/hasSource> <http://www.w3.org/2000/01/rdf-schema#label> "has source" .
+<https://w3id.org/iadopt/ont/hasSource> <http://www.w3.org/2000/01/rdf-schema#label> "has Source" .
 # 
 # https://w3id.org/iadopt/ont/hasStatisticalModifier
 <https://w3id.org/iadopt/ont/hasStatisticalModifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -225,7 +225,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/iadopt/ont/hasTarget> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iadopt/ont/AsymmetricSystem> .
 <https://w3id.org/iadopt/ont/hasTarget> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iadopt/ont/Entity> .
 <https://w3id.org/iadopt/ont/hasTarget> <http://www.w3.org/2000/01/rdf-schema#comment> "In a system that represents a flux or flow, this relation assign the role of the target or sink of that flux or flow." .
-<https://w3id.org/iadopt/ont/hasTarget> <http://www.w3.org/2000/01/rdf-schema#label> "has target" .
+<https://w3id.org/iadopt/ont/hasTarget> <http://www.w3.org/2000/01/rdf-schema#label> "has Target" .
 # 
 # 
 # 

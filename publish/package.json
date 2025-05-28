@@ -8,12 +8,12 @@
   "author": "Sirko Schindler",
   "license": "MIT",
   "dependencies": {
-    "cheerio": "1.0.0-rc.12",
-    "glob": "^10.4.1",
-    "luxon": "^3.4.4",
-    "marked": "^13.0.0",
+    "cheerio": "1.0.0",
+    "glob": "^11.0.2",
+    "luxon": "^3.6.1",
+    "marked": "^15.0.12",
     "mkdirp": "^3.0.1",
     "properties-reader": "^2.3.0",
-    "rdflib": "^2.2.35"
+    "rdflib": "^2.2.37"
   }
 }
