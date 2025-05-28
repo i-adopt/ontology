@@ -4,4 +4,4 @@ The I-ADOPT Framework is an ontology primarily designed to facilitate interopera
 
 * The first published versions of the ontology up to v0.9.1 satisfied the basic cross-domain interoperability requirements.
 * Version v1.0 of the ontology includes exactly the same original components plus an extension which is designed to support the aggregation of variables using a range of user-defined coarser concepts to facilitate dataset discovery and aggregation into products.
-* Version v1.1 introduces the concept of systems for any entity role, the statistical modifier and allows now constraints to constrain any description component.
+* Version v1.1 introduces the concept of Systems for any entity role, the StatisticalModifier, and allows constraints to constrain any description component.
