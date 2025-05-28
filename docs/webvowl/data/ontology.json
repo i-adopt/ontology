@@ -8,7 +8,7 @@
     },
     "iri" : "https://w3id.org/iadopt/ont",
     "version" : "1.1.0",
-    "author" : [ "Maria Stoica, University of Colorado, Boulder , ORCID: 0000-0002-6612-3439", "Sirko Schindler, Institute of Data Science, German Aerospace Center (DLR), ORCID: 0000-0002-0964-4457", "Gwenaelle Moncoiffe, National Oceanography Centre, British Oceanographic Data Centre, UK, ORCID: 0000-0001-6559-4178", "Anusuriya Devaraju, Terrestrial Ecosystem Research Network (TERN), University of Queensland, Australia, ORCID: 0000-0003-0870-3192", "Alison Pamment, National Centre for Atmospheric Science / Centre for Environmental Data Analysis, STFC Rutherford Appleton Laboratory, UK, ORCID: 0000-0001-5040-4626", "Barbara Magagna, Environment Agency Austria, ORCID: 0000-0003-2195-3997" ],
+    "author" : [ "Maria Stoica, University of Colorado, Boulder , ORCID: 0000-0002-6612-3439", "Sirko Schindler, Institute of Data Science, German Aerospace Center (DLR), ORCID: 0000-0002-0964-4457", "Gwenaelle Moncoiffe, National Oceanography Centre, British Oceanographic Data Centre, UK, ORCID: 0000-0001-6559-4178", "Anusuriya Devaraju, Terrestrial Ecosystem Research Network (TERN), University of Queensland, Australia, ORCID: 0000-0003-0870-3192", "Barbara Magagna, GO FAIR Foundation, NL, ORCID: 0000-0003-2195-3997", "Alison Pamment, National Centre for Atmospheric Science / Centre for Environmental Data Analysis, STFC Rutherford Appleton Laboratory, UK, ORCID: 0000-0001-5040-4626" ],
     "labels" : {
       "undefined" : "I-ADOPT Framework ontology"
     },
@@ -26,7 +26,7 @@
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Barbara Magagna, Environment Agency Austria, ORCID: 0000-0003-2195-3997",
+        "value" : "Barbara Magagna, GO FAIR Foundation, NL, ORCID: 0000-0003-2195-3997",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -196,10 +196,10 @@
     "id" : "9",
     "type" : "owl:Class"
   }, {
-    "id" : "3",
+    "id" : "20",
     "type" : "owl:Class"
   }, {
-    "id" : "20",
+    "id" : "3",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -311,19 +311,6 @@
     "attributes" : [ "external" ],
     "id" : "9"
   }, {
-    "iri" : "https://w3id.org/iadopt/ont/Variable",
-    "baseIri" : "https://w3id.org/iadopt/ont",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Variable",
-      "undefined" : "Variable"
-    },
-    "comment" : {
-      "undefined" : "A description of something observed or derived, minimally consisting of an ObjectOfInterest and its Property."
-    },
-    "attributes" : [ "external" ],
-    "id" : "3"
-  }, {
     "iri" : "https://w3id.org/iadopt/ont/Constraint",
     "baseIri" : "https://w3id.org/iadopt/ont",
     "instances" : 0,
@@ -336,6 +323,19 @@
     },
     "attributes" : [ "external" ],
     "id" : "20"
+  }, {
+    "iri" : "https://w3id.org/iadopt/ont/Variable",
+    "baseIri" : "https://w3id.org/iadopt/ont",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Variable",
+      "undefined" : "Variable"
+    },
+    "comment" : {
+      "undefined" : "A description of something observed or derived, minimally consisting of an ObjectOfInterest and its Property."
+    },
+    "attributes" : [ "external" ],
+    "id" : "3"
   } ],
   "property" : [ {
     "id" : "2",
@@ -383,10 +383,10 @@
     "id" : "28",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "5",
+    "id" : "29",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "29",
+    "id" : "5",
     "type" : "owl:objectProperty"
   }, {
     "id" : "23",
@@ -584,6 +584,20 @@
     "attributes" : [ "object", "external" ],
     "id" : "28"
   }, {
+    "iri" : "https://w3id.org/iadopt/ont/hasPart",
+    "baseIri" : "https://w3id.org/iadopt/ont",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasPart",
+      "undefined" : "has Part"
+    },
+    "domain" : "12",
+    "comment" : {
+      "undefined" : "A relation between a system and its part."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "29"
+  }, {
     "iri" : "https://w3id.org/iadopt/ont/hasMatrix",
     "baseIri" : "https://w3id.org/iadopt/ont",
     "range" : "4",
@@ -598,20 +612,6 @@
     },
     "attributes" : [ "object", "external" ],
     "id" : "5"
-  }, {
-    "iri" : "https://w3id.org/iadopt/ont/hasPart",
-    "baseIri" : "https://w3id.org/iadopt/ont",
-    "range" : "4",
-    "label" : {
-      "IRI-based" : "hasPart",
-      "undefined" : "has Part"
-    },
-    "domain" : "12",
-    "comment" : {
-      "undefined" : "A relation between a system and its part."
-    },
-    "attributes" : [ "object", "external" ],
-    "id" : "29"
   }, {
     "iri" : "https://w3id.org/iadopt/ont/hasTarget",
     "baseIri" : "https://w3id.org/iadopt/ont",
