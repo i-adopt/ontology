@@ -270,6 +270,11 @@ const Config = require('./config'),
   await Fs.copyFile(jsonSource, jsonTarget);
   console.log('Copied ontology.json to ontology.jsonld');
 
+  // copy OWL file as XML for backwards compatibility
+  const xmlSource = Path.join(Config.outPath, 'ontology.owl'),
+        xmlTarget = Path.join(Config.outPath, 'ontology.xml');
+  await Fs.copyFile(xmlSource, xmlTarget);
+  console.log('Copied ontology.owl to ontology.xml');
 
   /* XXXXXXXXXXXXXXXXXXXXXXXXXXXX ARCHIVE XXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 
