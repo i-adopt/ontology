@@ -1,7 +1,6 @@
 const Config = require('./config'),
       Cheerio = require('cheerio'),
       DateTime = require( 'luxon' ).DateTime,
-      Glob = require('glob').glob,
       Marked = require('marked'),
       Mkdir = require( 'mkdirp' ).mkdirp,
       Props = require('properties-reader'),
@@ -56,7 +55,7 @@ const Config = require('./config'),
   {
 
     // get all available versions
-    const ontoFiles = await Glob( '*.ttl', { cwd: Path.dirname( Config.ontFile ) } );
+    const ontoFiles = await Array.fromAsync( Fs.glob( '*.ttl', { cwd: Path.dirname( Config.ontFile ) } ) );
     const ontoVersions = ontoFiles
       .map( (f) => f.match( /i-adopt_(\d+_\d+_\d+).ttl/i ) )  // all versions of our ontology
       .filter( (f) => f )                                     // only include actual matches
@@ -67,7 +66,7 @@ const Config = require('./config'),
     const prevOntoVersion = ontoVersions[ ontoVersions.indexOf( ontoVersion ) - 1 ];
 
     // replace in Widoco property file
-    const widocoProps = Props( Config.confFile );
+    const widocoProps = Props.propertiesReader({ sourceFile: Config.confFile });
     widocoProps.set( 'thisVersionURI', Config.ontoPrefix + ontoVersion );
     widocoProps.set( 'previousVersionURI', Config.ontoPrefix + prevOntoVersion );
     widocoProps.set( 'dateCreated', DateTime.now().setLocale('en').toLocaleString( DateTime.DATE_FULL ) );
@@ -91,7 +90,7 @@ const Config = require('./config'),
 
   // replace text files
   console.log('Replacing text in sections');
-  const textFiles = await Glob('*.md', { cwd: Config.textFolder });
+  const textFiles = await Array.fromAsync( Fs.glob('*.md', { cwd: Config.textFolder }) );
   const sectionFolder = Path.join(Config.outPath, 'sections');
   for (const f of textFiles) {
 
@@ -279,7 +278,7 @@ const Config = require('./config'),
   /* XXXXXXXXXXXXXXXXXXXXXXXXXXXX ARCHIVE XXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 
   // create an archive copy
-  const docFiles = (await Glob( '**/*.*', { cwd: Config.outPath } ))
+  const docFiles = (await Array.fromAsync( Fs.glob( '**/*.*', { cwd: Config.outPath } ) ) )
     .filter( (f) => !f.startsWith( 'archive' ) && !f.endsWith( '.md' ) );
   const baseArchivePath = Path.join( Config.outPath, 'archive', ontoVersion );
   await Mkdir( baseArchivePath );
