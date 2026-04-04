@@ -188,7 +188,7 @@ iop:hasContextObject rdf:type owl:ObjectProperty ;
 iop:hasDenominator rdf:type owl:ObjectProperty ;
                    rdfs:domain iop:AsymmetricSystem ;
                    rdfs:range iop:Entity ;
-                   rdfs:comment "In a system that represents a fraction, this relation assign the role of the denominator." ;
+                   rdfs:comment "In a system that represents a fraction, this relation assigns the role of the denominator." ;
                    rdfs:label "has Denominator" .
 
 
